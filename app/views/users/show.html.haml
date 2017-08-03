@@ -28,29 +28,37 @@
         %p 試してみた
       .user-boards_body
         .panel-wrapper
-          %a.panel-body
-            .new-board_image
-              %i.fa.fa-plus-circle.fa-3x
-            .panel-footer
-              %p 新規ボードを作成
-          - @pins.each do |pin|
+          .panel-body
+            = link_to new_board_path do
+              .new-board_image
+                %i.fa.fa-plus-circle.fa-3x
+              .panel-footer
+                %p 新規ボードを作成
+          - @boards.each do |board|
             .panel-body
               .user-boards_body-image
-                = image_tag pin.image.url
+                / = image_tag board.pins.image.url
                 .panel-footer
-                  %p aaa
+                  %p
+                    = board.name
                   45 pin
-    .user-boards_secret
+    .user-boards
       .user-boards_secret-header
         %i.fa.fa-key.fa-2x
         %p シークレットボード
         %br/
         %p このボードはあなた（及びあなたが招待したユーザー）だけが見ることができます。 詳細
-      .user-boards_secret-body
-        - @pins.each do |pin|
-          .panel-body
-            .user-boards_body-image
-              = image_tag pin.image.url
+      .user-boards_body
+        .panel-wrapper
+          %a.panel-body
+            .new-board_image
+              %i.fa.fa-plus-circle.fa-3x
             .panel-footer
-              %p aaa
-              45 pin
+              %p 新規ボードを作成
+          / - @boards.each do |board|
+          /   .panel-body
+          /     .user-boards_body-image
+          /       = image_tag board.pins.image.url
+          /       .panel-footer
+          /         %p aaa
+          /         45 pin

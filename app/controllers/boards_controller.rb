@@ -1,21 +1,27 @@
 class BoardsController < ApplicationController
 
   def index
-    @boards = Boads.all.order("created_at DESC")
-    @board = Boads.new
+    @boards = Board.all.order("created_at DESC")
+    @board = Board.new
   end
 
   def new
-    @board = Boads.new
+    @board = Board.new
   end
 
   def create
-    @board = Boads.new(board_params)
+    @board = Board.new(board_params)
     if @board.save
-      redirect_to @board
+      redirect_to root_path, notice: 'メメタァ'
     else
       render 'new'
     end
+  end
+
+  private
+
+  def board_params
+    params.require(:board).permit(:name)
   end
 
 end

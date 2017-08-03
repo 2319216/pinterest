@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :edit]
   resources :boards
-  resources :pins do
+  resources :pins, except: :index do
     member do
       put "like", to: "pins#upvote"
     end

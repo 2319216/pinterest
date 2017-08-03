@@ -16,3 +16,34 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+
+// $(function() {
+//   $('.panel-wrapper').hover(function() {
+//     $('.index_modal-btn').fadeIn(200);
+//     $('.index_shere-pin').fadeIn(200);
+//     $('.text-btn').fadeIn(200);
+//     $(".panel-wrapper").fadeIn(500).css("background","rgba(0,0,0,0.05)");
+//   },
+//   function(){
+//     $('.index_modal-btn').fadeOut(200);
+//     $('.index_shere-pin').fadeOut(200);
+//     $('.text-btn').fadeOut(200);
+//     $(".panel-wrapper").css("background","rgba(0,0,0,0)");
+//   });
+// });
+
+
+
+
+// $(function(){
+//     $(".hoge3A").hover(function(){
+//       $(".red").css("background","red").text("はなすと ('(ﾟ∀ﾟ∩ もどるよ！")
+//     },
+//     function(){
+//         $(".red").css("background","#FC9").text("")
+//     });
+// });
+
+
+

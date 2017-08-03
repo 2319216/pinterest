@@ -4,9 +4,11 @@
       .panel-wrapper
         .panel-body
           %a
+          #panel
             = link_to (image_tag pin.image.url), pin
-          .index_modal-btn
+          #modalbtn.index_modal-btn
             %button.btn.btn-danger{"data-target" => "#exampleModalLong", "data-toggle" => "modal", :type => "button"}
+              %i.fa.fa-pinterest-square
               保存
             / Modal
             #exampleModalLong.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLongTitle", :role => "dialog", :tabindex => "-1"}
@@ -76,9 +78,14 @@
                           %p 新規ボードを作成
                         / %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Close
                         / %button.btn.btn-danger{:type => "button"} 保存
-          .index_shere-pin
+          #shere.index_shere-pin
             %button.btn.btn-default{"data-target" => "#exampleModalLong", "data-toggle" => "modal", :type => "button"}
               %i.fa.fa-share-square-o
+          #showmore.show_more-pin
+            %button.btn
+              %i.fa.fa-circle-o
+              もっと見る
         .panel-footer
-          .text-btn
-            = link_to "…"
+          #text.text-btn
+            = link_to do
+              %i.fa.fa-ellipsis-h
