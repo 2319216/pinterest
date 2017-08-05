@@ -1,33 +1,46 @@
 #user_edit
   .container
     .row-left
-      .row-left_edit-menu
-        %p アカウント情報
-        %p お知らせ
-        %p ホームフィード
-        %p SNSアカウント
-        %p セキュリティ
-        %p アプリ
+      .row-left_nav
+        %ul
+          %li
+            %a{href: "#sec1"} アカウント情報
+          %li
+            %a{href: "#sec2"} お知らせ
+          %li
+            %a{href: "#sec3"} ホームフィード
+          %li
+            %a{href: "#sec4"} SNSアカウント
+          %li
+            %a{href: "#sec5"} セキュリティ
+          %li
+            %a{href: "#sec6"} アプリ
 
     .row-right
       .row-right_body
-        .account-information
-          %p アカウント情報
+        %section#sec1.account-information
+          %h6 アカウント情報
           .mail
             %p メールアドレス
-            %p aaa.com
+            .mail_text-box
+              %span aaa.com
           .password
             %p パスワード
-            %p パスワードを変更
+            .password_change-box
+              %span パスワードを変更
           .language
             %p 言語
-            %p 日本語
+            .language_box
+              %span 日本語
           .country-of-residence
-            %p 日本(日本)
+            %p 居住国
+            .country-of-residence_box
+              %span 日本(日本)
           .gender
-            %p 男
-            %p 女
-            %p カスタム
+            %p 性別
+            %input#male.gender_radio-btn{:name => "gender", :type => "radio", :value => "male"} 男性
+            %input#female.gender_radio-btn{:name => "gender", :type => "radio", :value => "female"} 女性
+            %input#male.gender_radio-btn{:name => "gender", :type => "radio", :value => "unspecified"} カスタム
           .privacy
             %p 検索プライバシー
             %p 検索エンジン（例：Google）でプロフィールを非表示にします。詳細
@@ -42,7 +55,7 @@
             %p アカウント
             %p アカウントを解除
 
-        .profile
+        %section#sec2.profile
           .name
             %p プロフィール
             %p 名前
@@ -52,10 +65,10 @@
           .housing
           .web-site
 
-        .home-feed
+        %section#sec3.home-feed
           .recommended-pin
 
-        .sns
+        %section#sec4.sns
           .elaborate
-        .security
-        .app
+        %section#sec5.security
+        %section#sec6.app

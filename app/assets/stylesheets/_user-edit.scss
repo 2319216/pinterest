@@ -1,0 +1,108 @@
+#user_edit{
+  .container{
+    width: 1134px;
+    display: flex;
+    padding-top: 50px;
+    .row-left{
+      width: 325px;
+      &_nav{
+        ul{
+          li{
+            list-style: none;
+            height: 28px;
+            a{
+              font-size: 15.5px;
+              font-weight: 700;
+              color: #b5b5b5;
+            }
+          }
+        }
+      }
+    }
+    .row-right{
+      width: 734px;
+      &_body{
+        h6{
+          font-size: 20.6px;
+          font-weight: bold;
+        }
+        p{
+          font-size: 13.8px;
+        }
+        .mail{
+          height: 78px;
+          margin-top: 8px;
+          margin-bottom: 8px;
+          &_text-box{
+            height: 40px;
+            background-color: #efefef;
+            border-radius: 7px;
+            span{
+              line-height: 40px;
+              padding-left: 16px;
+              font-weight: 500;
+              color: #555;
+            }
+          }
+        }
+        .password{
+          height: 78px;
+          margin-top: 8px;
+          margin-bottom: 8px;
+          &_change-box{
+            width: 140px;
+            height: 40px;
+            background-color: #efefef;
+            border-radius: 7px;
+            span{
+              line-height: 40px;
+              padding-left: 11px;
+              font-weight: 700;
+              color: #555;
+            }
+          }
+        }
+        .language{
+          height: 78px;
+          margin-top: 8px;
+          margin-bottom: 8px;
+          &_box{
+            height: 40px;
+            background-color: #efefef;
+            border-radius: 7px;
+            span{
+              line-height: 40px;
+              padding-left: 16px;
+              font-weight: 700;
+              color: #555;
+            }
+          }
+        }
+        .country-of-residence{
+          height: 78px;
+          margin-top: 8px;
+          margin-bottom: 8px;
+          &_box{
+            height: 40px;
+            background-color: #efefef;
+            border-radius: 7px;
+            span{
+              line-height: 40px;
+              padding-left: 16px;
+              font-weight: 700;
+              color: #555;
+            }
+          }
+        }
+        .gender{
+          height: 62px;
+          margin-top: 8px;
+          margin-bottom: 8px;
+          &_radio-btn{
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}

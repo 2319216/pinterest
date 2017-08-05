@@ -45,5 +45,25 @@
 //     });
 // });
 
+// $(function(){
+//   $("#modalbtn").click(function(){
+//     $("body").append('.modal-content');
+//     $("body").append('.modal-content_body');
+//     $('.modal-content').hide();
+//     $('.modal-content_body').hide();
+//     $('.modal-content').fadeIn();
+//     $('.modal-content_body').fadeIn();
 
+//     return false;
+//   })
+// })
 
+// $(window).load(function(){
+//   var $pins = $('#pins');
+//   $pins.imagesLoaded( function(){
+//     $pins.masonry({
+//       itemSelector : '.box'
+//       isAnimated : true
+//     });
+//   });
+// });

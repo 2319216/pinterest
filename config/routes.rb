@@ -5,8 +5,14 @@ Rails.application.routes.draw do
 
   root "pins#index"
 
+  # resources :storages, only: :destroy
   resources :users, only: [:show, :edit]
-  resources :boards
+  resources :boards do
+    member do
+      # get "add", to: "board_pins#new"
+      post "add", to: "board_pins#create"
+    end
+  end
   resources :pins, except: :index do
     member do
       put "like", to: "pins#upvote"

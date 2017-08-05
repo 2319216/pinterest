@@ -3,6 +3,7 @@ class PinsController < ApplicationController
   before_action :authenticate_user!, expect: [:index, :show]
 
   def index
+    @boards = Board.all.order("created_at DESC")
     @pins = Pin.all.order("created_at DESC")
     @pin = Pin.new
   end

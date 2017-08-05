@@ -1,6 +1,6 @@
 #user_show
   .header
-    %a
+    %a{:href => "/users/#{current_user.id}/edit"}
       %i.fa.fa-wrench.fa-2x
     %a
       %i.fa.fa-plane.fa-2x
@@ -14,10 +14,10 @@
             = current_user.name
       .user-infomation_follow
         .followers
-          10
+          %span 10
           %p フォロワー
         .follow-up
-          10
+          %span 10
           %p フォロー中
       .user-infomation_user-image
         = image_tag @pin.image.url(:medium)
@@ -35,8 +35,9 @@
               .panel-footer
                 %p 新規ボードを作成
           - @boards.each do |board|
-            .panel-body
+            %a.panel-body
               .user-boards_body-image
+                .panel-body_img
                 / = image_tag board.pins.image.url
                 .panel-footer
                   %p

@@ -1,6 +1,6 @@
 #pins.transitions-enabled
   - @pins.each do |pin|
-    .box.panel.panel-default
+    .box
       .panel-wrapper
         .panel-body
           %a
@@ -31,46 +31,26 @@
                         .popularity-boards
                           .popularity-boards_header
                             人気のボード
-                          .popularity-boards_body
-                            %a.bord-table
-                              .bord-table_img
-                                = image_tag pin.image.url
-                              %p ファッション
-                              %button.btn.btn-danger{:type => "button"} 保存
-                            %a.bord-table
-                              .bord-table_img
-                                = image_tag pin.image.url
-                              %p 映画
-                              %button.btn.btn-danger{:type => "button"} 保存
+                            - @boards.each do |board|
+                              .popularity-boards_body
+                                .bord-table
+                                  = link_to add_board_path(board), method: :post do
+                                    .bord-table_img
+                                      /  = image_tag pin.image.url
+                                    %p
+                                      = board.name
+                                    %button.btn.btn-danger{:type => "button"} 保存
                         .all-boards
                           .all-boards_header
                             すべてのボード
-                          .all-boards_body
-                            %a.bord-table
-                              .bord-table_img
-                                = image_tag pin.image.url
-                              %p ファッション
-                              %button.btn.btn-danger{:type => "button"} 保存
-                            %a.bord-table
-                              .bord-table_img
-                                = image_tag pin.image.url
-                              %p 映画
-                              %button.btn.btn-danger{:type => "button"} 保存
-                            %a.bord-table
-                              .bord-table_img
-                                = image_tag pin.image.url
-                              %p ホームアイデア
-                              %button.btn.btn-danger{:type => "button"} 保存
-                            %a.bord-table
-                              .bord-table_img
-                                = image_tag pin.image.url
-                              %p ヘアスタイル
-                              %button.btn.btn-danger{:type => "button"} 保存
-                            %a.bord-table
-                              .bord-table_img
-                                = image_tag pin.image.url
-                              %p 料理
-                              %button.btn.btn-danger{:type => "button"} 保存
+                            - @boards.each do |board|
+                              .all-boards_body
+                                %a.bord-table
+                                  .bord-table_img
+                                    / = image_tag pin.image.url
+                                  %p
+                                    = board.name
+                                  %button.btn.btn-danger{:type => "button"} 保存
 
                       .modal-content_footer
                         %a.new-board
