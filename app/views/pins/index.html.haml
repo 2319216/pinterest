@@ -3,69 +3,68 @@
     .box
       .panel-wrapper
         .panel-body
-          %a
-          #panel
+          %a.panel-body_img
             = link_to (image_tag pin.image.url), pin
-          #modalbtn.index_modal-btn
-            %button.btn.btn-danger{"data-target" => "#exampleModalLong", "data-toggle" => "modal", :type => "button"}
-              %i.fa.fa-pinterest-square
-              保存
-            / Modal
-            #exampleModalLong.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLongTitle", :role => "dialog", :tabindex => "-1"}
-              .modal-dialog{:role => "document"}
-                .modal-content
-                  .modal-content_body
-                    .row-left
-                      .row-left_body
-                        .row-left_body-image
-                          = image_tag pin.image.url
-                        / %p
-                        /   = pin.title
-                    .row-right
-                      .row-right_header
-                        .container-fluid
-                          %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
-                            %span{"aria-hidden" => "true"} ×
-                          %h2 ボードを選択
-                      .row-right_body
-                        .popularity-boards
-                          .popularity-boards_header
-                            人気のボード
-                            - @boards.each do |board|
-                              .popularity-boards_body
-                                .bord-table
-                                  = link_to add_board_path(board), method: :post do
+          #btns.btns
+            .index_modal-btn
+              %button.btn.btn-danger{"data-target" => "#exampleModalLong", "data-toggle" => "modal", :type => "button"}
+                %i.fa.fa-pinterest-square
+                保存
+              / Modal
+              #exampleModalLong.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLongTitle", :role => "dialog", :tabindex => "-1"}
+                .modal-dialog{:role => "document"}
+                  #modal.modal-content
+                    .modal-content_body
+                      .row-left
+                        .row-left_body
+                          .row-left_body-image
+                            = image_tag pin.image.url
+                          / %p
+                          /   = pin.title
+                      .row-right
+                        .row-right_header
+                          .container-fluid
+                            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+                              %span{"aria-hidden" => "true"} ×
+                            %h2 ボードを選択
+                        .row-right_body
+                          .popularity-boards
+                            .popularity-boards_header
+                              人気のボード
+                              - @boards.each do |board|
+                                .popularity-boards_body
+                                  .bord-table
+                                    = link_to add_board_path(board), method: :post do
+                                      .bord-table_img
+                                        /  = image_tag pin.image.url
+                                      %p
+                                        = board.name
+                                      %button.btn.btn-danger{:type => "button"} 保存
+                          .all-boards
+                            .all-boards_header
+                              すべてのボード
+                              - @boards.each do |board|
+                                .all-boards_body
+                                  %a.bord-table
                                     .bord-table_img
-                                      /  = image_tag pin.image.url
+                                      / = image_tag pin.image.url
                                     %p
                                       = board.name
                                     %button.btn.btn-danger{:type => "button"} 保存
-                        .all-boards
-                          .all-boards_header
-                            すべてのボード
-                            - @boards.each do |board|
-                              .all-boards_body
-                                %a.bord-table
-                                  .bord-table_img
-                                    / = image_tag pin.image.url
-                                  %p
-                                    = board.name
-                                  %button.btn.btn-danger{:type => "button"} 保存
 
-                      .modal-content_footer
-                        %a.new-board
-                          %i.fa.fa-plus-circle.fa-3x
-                          %p 新規ボードを作成
-                        / %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Close
-                        / %button.btn.btn-danger{:type => "button"} 保存
-          #shere.index_shere-pin
-            %button.btn.btn-default{"data-target" => "#exampleModalLong", "data-toggle" => "modal", :type => "button"}
-              %i.fa.fa-share-square-o
-          #showmore.show_more-pin
-            %button.btn
-              %i.fa.fa-circle-o
-              もっと見る
-        .panel-footer
+                        .modal-content_footer
+                          %a.new-board
+                            %i.fa.fa-plus-circle.fa-3x
+                            %p 新規ボードを作成
+
+            #shere.index_shere-pin
+              %button.btn.btn-default
+                %i.fa.fa-share-square-o
+            .show_more-pin
+              %button.btn
+                %i.fa.fa-circle-o
+                もっと見る
+        .panel_footer
           #text.text-btn
             = link_to do
               %i.fa.fa-ellipsis-h

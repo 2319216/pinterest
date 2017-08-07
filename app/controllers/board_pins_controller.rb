@@ -13,7 +13,7 @@ class BoardPinsController < ApplicationController
     # binding.pry
 
       if @board_pin.save
-        redirect_to root_path, notice: "やったぜコンチクショウ！"
+        redirect_to root_path, notice: "保存しました"
       end
   end
 

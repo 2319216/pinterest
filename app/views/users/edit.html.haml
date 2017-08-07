@@ -38,9 +38,12 @@
               %span 日本(日本)
           .gender
             %p 性別
-            %input#male.gender_radio-btn{:name => "gender", :type => "radio", :value => "male"} 男性
-            %input#female.gender_radio-btn{:name => "gender", :type => "radio", :value => "female"} 女性
-            %input#male.gender_radio-btn{:name => "gender", :type => "radio", :value => "unspecified"} カスタム
+            %input#male.gender_radio-btn{:name => "gender", :type => "radio", :value => "male"}
+              %span 男性
+            %input#female.gender_radio-btn{:name => "gender", :type => "radio", :value => "female"}
+              %span 女性
+            %input#male.gender_radio-btn{:name => "gender", :type => "radio", :value => "unspecified"}
+              %span カスタム
           .privacy
             %p 検索プライバシー
             %p 検索エンジン（例：Google）でプロフィールを非表示にします。詳細
