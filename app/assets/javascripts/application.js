@@ -91,7 +91,6 @@ $(function(){
 $(function(){
   $("#sherepin").click(function(){
     $("body").append('#tooltip');
-    // $("#tooltip").hide();
 
     $("#tooltip").css("top", $(this).offset().top - $("#sherepin").height() - 30 );
     $("#tooltip").css("left", $(this).offset().left - ($("#tooltip").width() - $(this).width())/2.5);
@@ -103,6 +102,7 @@ $(function(){
         $(this).remove();
       });
     });
+    return false;
   });
 });
 

@@ -1,0 +1,199 @@
+#tooltip{
+  position:absolute;
+  border-radius:10px;
+  background:#fff;
+  display: none;
+  z-index: 2;
+  height: 410px;
+  width: 286px;
+  border: 1px solid #EAEAEA;
+}
+
+#tooltip:before{
+  content:" ";
+  width:0px;
+  border-bottom: 15px solid #fff;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  position:absolute;
+  left: 15%;
+  margin-left:-8px;
+  top: -15px;
+}
+
+.tooltip-wrapper{
+  .tooltip-header{
+    height: 117px;
+    border-bottom: 1px solid #EAEAEA;
+    &_content{
+      padding: 20px;
+      p{
+        font-size: 14px;
+        color: #555;
+        padding-bottom: 6px;
+      }
+      .icons{
+        a{
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+  .tooltip-body{
+    &_content{
+      padding: 20px;
+      .content_p{
+        font-size: 14px;
+        color: #555;
+      }
+      .content_form{
+        display: flex;
+        color: #555;
+        &-box{
+          height: 43px;
+          width: 244px;
+          background-color: #efefef;
+          border-radius: 5px;
+          i{
+            font-size: 18px;
+            margin: 12px;
+            float: left;
+          }
+          p{
+            font-size: 18px;
+            font-weight: bold;
+            float: left;
+            line-height: 43px;
+          }
+        }
+      }
+    }
+  }
+  .tooltip-bottom{
+    &_content{
+      height: 36px;
+      padding: 10px;
+      p{
+        float: left;
+        font-size: 18px;
+        color: #666;
+        font-weight: bold;
+        margin: 5px;
+      }
+    }
+  }
+}
+
+
+.addicon{
+  border-radius: 50px;
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  vertical-align: middle;
+  color: #FFF;
+  background-color: #BD1E23;
+  float: left;
+}
+
+.fl_fb {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  color: #4966a0;;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.fl_fb .fbicon{
+  border-radius: 50px;
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  font-size: 35px;
+  line-height: 44px;
+  vertical-align: middle;
+  color: #FFF;
+  background: #4966a0;
+}
+
+.fl_fb .fbicon .fa-facebook {
+    position: absolute;
+    bottom: -3px;
+    right: 6px;
+    font-size: 36px;
+}
+
+.fl_tw {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  color: #1da1f3;
+  font-size: 25px;
+  text-decoration: none;
+  }
+
+.fl_tw .twicon{
+  border-radius: 50px;
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  font-size: 35px;
+  line-height: 44px;
+  vertical-align: middle;
+  color: #FFF;
+  background: #1da1f3;
+}
+
+.fl_tw .twicon .fa {
+  line-height: 44px;
+  font-size: 36px;
+}
+
+
+.insta_btn {
+  display: inline-block;
+  text-align: center;/*中央揃え*/
+  color: #2e6ca5;/*文字色*/
+  font-size: 20px;/*文字サイズ*/
+  text-decoration: none;/*下線消す*/
+}
+
+.insta_btn .insta{/*アイコンの背景*/
+  position: relative;/*相対配置*/
+  display: inline-block;
+  width: 44px;/*幅*/
+  height: 44px;/*高さ*/
+  vertical-align: middle;/*垂直中央に*/
+  background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;/*グラデーション①*/
+  overflow: hidden;/*はみ出た部分を隠す*/
+  border-radius: 50px;/*角丸に*/
+
+}
+
+.insta_btn .insta:before{/*グラデーションを重ねるため*/
+  content: '';
+  position: absolute;/*絶対配置*/
+  top: 23px;/*ずらす*/
+  left: -18px;/*ずらす*/
+  width: 60px;/*グラデーションカバーの幅*/
+  height: 60px;/*グラデーションカバーの高さ*/
+  background: -webkit-radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+  background: radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);/*グラデーション②*/
+}
+
+.insta_btn .fa-instagram {/*アイコン*/
+  color: #FFF;/*白に*/
+  position: relative;/*z-indexを使うため*/
+  z-index: 2;/*グラデーションより前に*/
+  font-size: 35px;/*アイコンサイズ*/
+  line-height: 44px;/*高さと合わせる*/
+}
+

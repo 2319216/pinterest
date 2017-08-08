@@ -226,33 +226,3 @@
   width: 660px;
   display: none;
 }
-
-#tooltip{
-  position:absolute;
-  border-radius:10px;
-  background:#fff;
-  display: none;
-  z-index: 2;
-  height: 410px;
-  width: 286px;
-  border: 1px solid #EAEAEA;
-}
-
-#tooltip p{
-  text-align:center;
-  color:#E86278;
-  font-size:2em;
-  padding:17px;
-}
-
-#tooltip:before{
-  content:" ";
-  width:0px;
-  border-bottom: 15px solid #fff;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  position:absolute;
-  left: 15%;
-  margin-left:-8px;
-  top: -15px;
-}
