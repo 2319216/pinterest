@@ -17,6 +17,8 @@
 //= require turbolinks
 //= require_tree .
 
+
+
 // function masonryAllTheThings(){
 //   $('.transitions-enabled').imageLoaded(function(){
 //     $('.transitions-enabled').masonry({
@@ -31,6 +33,7 @@
 // $(document).ready(masonryAllTheThings);
 // $(document).on('page:road',masonryAllTheThings)
 
+
 // $(window).load(function(){
 //   var $pins = $('.transitions-enabled');
 //   $pins.imagesLoaded( function(){
@@ -41,10 +44,65 @@
 //   });
 // });
 
-// $(function(){
 
-//   $('#shere').click(function () {
-//     $('').fadeIn();
-//   });
 
+
+$(document).on('turbolinks:load', function() {
+// $(document).on('turbolinks:request-start', function() {
+// $(document).on('turbolinks:render', function() {
+  $(window).load(function() {
+    $('.grid').masonry({
+        columnWidth: 0
+    });
+  });
+});
+
+// # ページ切り替え時（初回ページは対象外）
+// $(document).on('turbolinks:render', function() {
+//   //ページ切り替え後にさせたい処理
 // });
+
+// # ページ遷移前
+// $(document).on('turbolinks:request-start', function() {
+//   ページ遷移前にさせたい処理
+// });
+
+$(function(){
+  $("#modalbtn").click(function(){
+    $("body").append("#bg")
+    $("body").append("#modal")
+
+    $("#bg").fadeIn();
+    $("#modal").fadeIn();
+
+    $("#bg").click(function(){
+      $(this).fadeOut(function(){
+        $(this).remove();
+      });
+      ("#modal").fadeOut(function(){
+        $(this).remove();
+      });
+    });
+    return false;
+  });
+});
+
+
+$(function(){
+  $("#sherepin").click(function(){
+    $("body").append('#tooltip');
+    // $("#tooltip").hide();
+
+    $("#tooltip").css("top", $(this).offset().top - $("#sherepin").height() - 30 );
+    $("#tooltip").css("left", $(this).offset().left - ($("#tooltip").width() - $(this).width())/2.5);
+
+    $("#tooltip").fadeIn();
+
+    $("#tooltip").click(function(){
+      $(this).fadeOut(function(){
+        $(this).remove();
+      });
+    });
+  });
+});
+
