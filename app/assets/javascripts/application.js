@@ -18,54 +18,19 @@
 //= require_tree .
 
 
-
-// function masonryAllTheThings(){
-//   $('.transitions-enabled').imageLoaded(function(){
-//     $('.transitions-enabled').masonry({
-//       itemSelector : '.box',
-//       isAnimated: true,
-//       isFitWidth: true
-//     });
-//   });
-// }
-
-
-// $(document).ready(masonryAllTheThings);
-// $(document).on('page:road',masonryAllTheThings)
-
-
-// $(window).load(function(){
-//   var $pins = $('.transitions-enabled');
-//   $pins.imagesLoaded( function(){
-//     $pins.masonry({
-//       itemSelector : '.box'
-//       isAnimated : true
-//     });
-//   });
-// });
-
-
-
-
 $(document).on('turbolinks:load', function() {
-// $(document).on('turbolinks:request-start', function() {
-// $(document).on('turbolinks:render', function() {
-  $(window).load(function() {
-    $('.grid').masonry({
-        columnWidth: 0
-    });
+  $('.grid').masonry({
+      columnWidth: 0
   });
 });
 
-// # ページ切り替え時（初回ページは対象外）
-// $(document).on('turbolinks:render', function() {
-//   //ページ切り替え後にさせたい処理
-// });
 
-// # ページ遷移前
-// $(document).on('turbolinks:request-start', function() {
-//   ページ遷移前にさせたい処理
-// });
+$(document).on('turbolinks:render', function() {
+  $('.grid').masonry({
+      columnWidth: 0
+  });
+});
+
 
 $(function(){
   $("#modalbtn").click(function(){

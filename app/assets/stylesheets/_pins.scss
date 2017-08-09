@@ -1,14 +1,10 @@
 #pins {
-  margin: 0 auto;
+  margin-left: 60px;
   width: 100%;
   .box {
     margin: 3px;
     width: 256px;
     border-radius: 7px;
-    // font-weight: bold;
-    // background: rgba(0,0,0,1);
-    // position: relative;
-    // float: left;
     border-style: none;
     .panel-wrapper{
       &:hover{
@@ -55,14 +51,12 @@
         right: 20px;
         top: 20px;
         border-style: none;
-        // opacity: 1;
       }
       .index_shere-pin{
         position: absolute;
         left: 20px;
         top: 20px;
         border-style: none;
-        // opacity: 1;
       }
       .text-btn{
         position: absolute;
@@ -79,7 +73,6 @@
         right: 20px;
         bottom: 50px;
         border-radius: 50px;
-        // opacity: 1;
         button{
           border-radius: 50px;
           background: rgba(0,0,0,0.7);
@@ -170,7 +163,6 @@
                 position: absolute;
                 top: 9px;
                 right: 9px;
-                // background-color: #b7071b;
               }
               p{
                 font-size: 16px;
