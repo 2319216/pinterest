@@ -17,6 +17,9 @@
 //= require turbolinks
 //= require_tree .
 
+// $(document).on('turbolinks:load', function() {
+//   window.alert('JavaScriptを外部ファイルから読み込む');
+// });
 
 $(document).on('turbolinks:load', function() {
   $('.grid').masonry({
@@ -57,7 +60,7 @@ $(function(){
   $("#sherepin").click(function(){
     $("body").append('#tooltip');
 
-    $("#tooltip").css("top", $(this).offset().top - $("#sherepin").height() - 30 );
+    $("#tooltip").css("top", $(this).offset().top - $("#sherepin").height() - 20 );
     $("#tooltip").css("left", $(this).offset().left - ($("#tooltip").width() - $(this).width())/2.5);
 
     $("#tooltip").fadeIn();

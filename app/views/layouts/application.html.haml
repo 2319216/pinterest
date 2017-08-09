@@ -9,43 +9,45 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %nav.navber.navber-default
-      .container
-        .navber-header
-          / = simple_form_for @pin do |f|
-          .navbar-brand
-            .navbar-brand_row
+    %nav.navber
+      .navber_header
+        / = simple_form_for @pin do |f|
+        .navbar_brand
+          .navbar_brand_row
+            = link_to root_path do
+              %i.fa.fa-pinterest.fa-2x
+              %p ホームフィード
+          / .form-group
+          /   = f.input :title
+        .navber_form
+          %i.fa.fa-search
+          %p 検索
+
+        - if user_signed_in?
+          .navbar_right
+            %li.navbar_right_btn.pic
               = link_to root_path do
-                %i.fa.fa-pinterest.fa-2x
-                %p ホームフィード
-            / .form-group
-            /   = f.input :title
+                %i.fa.fa-compass.fa-2x
+                %p ピックアップ
+            %li.navbar_right_btn.mypage
+              %a{href: "/users/#{current_user.id}"}
+                %i.fa.fa-user.fa-2x
+                %p マイページ
+            %li.navbar_right_btn.info
+              = link_to root_path do
+                %i.fa.fa-commenting-o.fa-2x
+                %p お知らせ
+            %li.navbar_right_btn.contribution
+              = link_to new_pin_path do
+                %i.fa.fa-pencil-square-o.fa-2x
+                %p 投稿
 
-          - if user_signed_in?
-            %ul.nav.navbar-nav.navbar-right
-              %li.navbar-right_btn
-                = link_to root_path do
-                  %i.fa.fa-compass.fa-2x
-                  %p ピックアップ
-              %li.navbar-right_btn
-                %a{href: "/users/#{current_user.id}"}
-                  %i.fa.fa-user.fa-2x
-                  %p マイページ
-              %li.navbar-right_btn
-                = link_to root_path do
-                  %i.fa.fa-commenting-o.fa-2x
-                  %p お知らせ
-              %li.navbar-right_btn
-                = link_to new_pin_path do
-                  %i.fa.fa-pencil-square-o.fa-2x
-                  %p 投稿
+        - else
+          %ul.nav.navbar-nav.navbar-right
+            %li= link_to "Sign Up", new_user_registration_path
+            %li= link_to "Sign In", new_user_session_path
+    .row
+      -flash.each do |name,msg|
+        = content_tag :div, msg, class: "alert alert-info"
 
-          - else
-            %ul.nav.navbar-nav.navbar-right
-              %li= link_to "Sign Up", new_user_registration_path
-              %li= link_to "Sign In", new_user_session_path
-      .row
-        -flash.each do |name,msg|
-          = content_tag :div, msg, class: "alert alert-info"
-
-        = yield
+      = yield

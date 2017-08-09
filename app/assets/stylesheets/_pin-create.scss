@@ -1,5 +1,26 @@
 #pins_create{
   .row{
+    min-height: 800px;
     background-image: url("https://s.pinimg.com/webapp/style/images/bg_multi_case_grid_no_text_white-e3747f04.jpg");
+    -webkit-animation: bgscroll 25s linear infinite;
+     animation: bgscroll 25s linear infinite;
+    .pins-create_background-image{
+      margin-top: 5%;
+      .panel-heading{
+        h1{
+          text-align: center;
+        }
+      }
+    }
   }
+}
+
+@-webkit-keyframes bgscroll {
+ 0% {background-position: 0 0;}
+ 100% {background-position: 0 -500px;}
+}
+
+@keyframes bgscroll {
+ 0% {background-position: 0 0;}
+ 100% {background-position: 0 -500px;}
 }

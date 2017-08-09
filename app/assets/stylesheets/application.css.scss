@@ -27,11 +27,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 nav {
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
-  .navber-header{
-    height: 79px;
-    width: 100%;
-    .navbar-brand {
+  height: 64px;
+  width: 100%;
+  padding: 4px 16px;
+  .navber_header{
+    padding: 4px;
+    border-bottom: 1px solid #EAEAEA;
+    display: flex;
+    .navbar_brand {
+      height: 50px;
+      width: 96px;
+      border-radius: 7px;
+      &:hover{
+        background-color: #efefef;
+        a{
+          text-decoration: none;
+        }
+      }
       &_row{
         text-align: center;
         .fa-pinterest{
@@ -42,20 +54,45 @@ nav {
         p{
           font-size: 10.3px;
           color: #b5b5b5;
-        }
-        a {
           font-weight: bold;
-          &:hover {
-            text-decoration: none;
-          }
         }
       }
     }
-    .navbar-right{
+    .navber_form{
+      height: 40px;
+      width: 1000px;
+      background-color: #efefef;
+      margin: 4px 16px;
+      border-radius: 7px;
       color: #b5b5b5;
+      i{
+        font-size: 20px;
+        line-height: 40px;
+        padding: 0 16px;
+        float: left;
+      }
+      p{
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 40px;
+        float: left;
+      }
+    }
+    .navbar_right{
+      color: #b5b5b5;
+      li{
+        list-style: none;
+        float: left;
+      }
       &_btn{
         height: 46px;
         text-align: center;
+        &:hover{
+          background-color: #efefef;
+          a{
+            text-decoration: none;
+          }
+        }
         p{
           font-size: 10.3px;
           color: #b5b5b5;
@@ -63,6 +100,30 @@ nav {
         a{
           color: #b5b5b5;
         }
+      }
+      .pic{
+        height: 46px;
+        width: 78px;
+        padding: 2px 4px;
+        border-radius: 7px;
+      }
+      .mypage{
+        height: 46px;
+        width: 67px;
+        padding: 2px 4px;
+        border-radius: 7px;
+      }
+      .info{
+        height: 46px;
+        width: 57px;
+        padding: 2px 4px;
+        border-radius: 7px;
+      }
+      .contribution{
+        height: 46px;
+        width: 57px;
+        padding: 2px 4px;
+        border-radius: 7px;
       }
     }
   }
