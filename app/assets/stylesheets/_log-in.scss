@@ -1,0 +1,145 @@
+#log-in{
+  .bg{
+    background-image: url("https://s.pinimg.com/webapp/style/images/bg_multi_case_grid_no_text_white-e3747f04.jpg");
+    min-height: 800px;
+    -webkit-animation: bgscroll 25s linear infinite;
+     animation: bgscroll 25s linear infinite;
+    .log-in_wrapper{
+      background:rgba(0, 0, 0, 0.5);
+      min-height: 800px;
+      width: 100%;
+      z-index: 1;
+      .log-in_content{
+        height: 533px;
+        width: 400px;
+        margin: 0 auto;
+        border: 1px solid #EAEAEA;
+        background-color: #fff;
+        border-radius: 7px;
+        left: 50%;
+        margin-top: 100px;
+        .brand-icon{
+          text-align: center;
+          i{
+            margin-top: 30px;
+            color: rgb(189, 8, 28);
+          }
+        }
+        .message{
+          height: 42px;
+          margin: 5px 26px 26px;
+          p{
+            text-align: center;
+            font-weight: bold;
+            font-size: 28px;
+            color: #555;
+          }
+        }
+        .form{
+          &-inputs{
+            width: 268px;
+            margin: 0 auto;
+            font-size: 0px;
+            .form-control{
+              height: 37px;
+              width: 268px;
+              background-color: #f0f0f0;
+              border-style: none;
+            }
+          }
+          &-actions{
+            .btn.btn-default{
+              height: 37px;
+              width: 268px;
+              background-color: rgb(189, 8, 28);
+              color: #fff;
+              margin-left: 66px;
+            }
+          }
+          p{
+            margin: 12px 0 3px 0;
+            text-align: center;
+            font-weight: bold;
+          }
+        }
+        .fb-icon{
+          margin-left: 66px;
+        }
+        .policy{
+          margin-top: 15px;
+          margin-left: 66px;
+          width: 268px;
+          p{
+            font-size: 12px;
+            color: #aaa;
+          }
+        }
+      }
+    }
+  }
+}
+
+@-webkit-keyframes bgscroll {
+ 0% {background-position: 0 0;}
+ 100% {background-position: 0 -500px;}
+}
+
+@keyframes bgscroll {
+ 0% {background-position: 0 0;}
+ 100% {background-position: 0 -500px;}
+}
+
+.fl_fb2 {/*ボタンの下地*/
+  color: #FFF;/*文字・アイコン色*/
+  border-radius: 7px;/*角丸に*/
+  display: inline-block;
+  height: 37px;/*高さ*/
+  width: 268px;/*幅*/
+  text-align: center;/*中身を中央寄せ*/
+  font-size: 15px;/*文字のサイズ*/
+  line-height: 37px;/*高さと合わせる*/
+  vertical-align: middle;/*垂直中央寄せ*/
+  background: #4966a0;
+  overflow: hidden;/*はみ出た部分を隠す*/
+  text-decoration:none;/*下線は消す*/
+  margin-top: 10px;
+}
+
+.fl_fb2 .fa-facebook {
+    text-shadow: 2px 2px 1px #224282;
+    font-size: 20px;
+}
+
+.fl_fb2 span {/*テキスト*/
+  display:inline-block;
+  transition: .5s;
+}
+
+.fl_fb2:hover span{/*ホバーで一周回転*/
+  -webkit-transform: rotateX(360deg);
+  -ms-transform: rotateX(360deg);
+  transform: rotateX(360deg);
+}
+
+
+.fl_google {/*ボタンの下地*/
+  color: #FFF;/*文字・アイコン色*/
+  border-radius: 7px;/*角丸に*/
+  display: inline-block;
+  height: 37px;/*高さ*/
+  width: 268px;/*幅*/
+  text-align: center;/*中身を中央寄せ*/
+  font-size: 15px;/*文字のサイズ*/
+  line-height: 37px;/*高さと合わせる*/
+  vertical-align: middle;/*垂直中央寄せ*/
+  background: #4285f4;
+  overflow: hidden;/*はみ出た部分を隠す*/
+  text-decoration:none;/*下線は消す*/
+  margin-top: 10px;
+}
+
+
+.fl_fb2 .fa-google {
+    text-shadow: 2px 2px 1px #224282;
+    font-size: 20px;
+}

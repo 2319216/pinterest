@@ -1,0 +1,31 @@
+#log-in
+  .bg
+    .log-in_wrapper
+      .log-in_btn
+        %p ログイン
+      .log-in_content
+        .brand-icon
+          %i.fa.fa-pinterest.fa-3x
+        .message
+          %p Pinterest へようこそ！
+        .form
+          = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+            .form-inputs
+              = f.input :email, label: "メール", placeholder: "メール", required: false, autofocus: true
+              = f.input :password, label: "パスワード", placeholder: "パスワードを作成", required: false
+              / = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+            .form-actions
+              = f.button :submit, "続行"
+          / = render "devise/shared/links"
+          %p または
+        .fb-icon
+          %a.fl_fb2
+            %i.fa.fa-facebook
+            %span Facebookでログイン
+          %a.fl_google
+            %i.fa.fa-google
+            %span Googleで続行
+        .policy
+          %p 利用を継続することで Pinterest の利用規約とプライバシーポリシーに同意することになります。
+
+
