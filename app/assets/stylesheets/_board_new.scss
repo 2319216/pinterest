@@ -1,0 +1,17 @@
+#board_new{
+  .bg{
+    background-image: url("https://s.pinimg.com/webapp/style/images/bg_multi_case_grid_no_text_white-e3747f04.jpg");
+      min-height: 800px;
+      -webkit-animation: bgscroll 25s linear infinite;
+       animation: bgscroll 25s linear infinite;
+    .container{
+      .col-md-4.col-md-offset-4{
+        height: 300px;
+        width: 500px;
+        background-color: #fff;
+        margin-top: 100px;
+        border-radius: 7px;
+      }
+    }
+  }
+}

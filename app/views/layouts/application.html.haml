@@ -8,17 +8,16 @@
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %link{:href => "favicon.ico", :rel => "icon", :type => "image/vnd.microsoft.icon"}/
   %body
     %nav.navber
       .navber_header
-        / = simple_form_for @pin do |f|
         .navbar_brand
           .navbar_brand_row
             = link_to root_path do
               %i.fa.fa-pinterest.fa-2x
               %p ホームフィード
-          / .form-group
-          /   = f.input :title
+
         .navber_form
           %i.fa.fa-search
           %p 検索

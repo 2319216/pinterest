@@ -21,6 +21,18 @@
 //   window.alert('JavaScriptを外部ファイルから読み込む');
 // });
 
+// $(document).on('turbolinks:load',function(){
+//   $(document).on('keyup','#modalbtn',function(e){
+//     e.preventDefault();
+//     var input = $.trim($(this).val());
+//   })
+//   $(function(data){
+//     $('#modal').find('#img').
+//   })
+// })
+
+
+
 $(document).on('turbolinks:load', function() {
   $('.grid').masonry({
       columnWidth: 0
@@ -36,9 +48,17 @@ $(document).on('turbolinks:render', function() {
 
 
 $(function(){
+
+  // $("#modal").each(function(){
+  //   $(this).attr("id","#{@pin.id}");
+  // });
+
+  // var pin_id = pin.attr("data-pin-id");
+
   $("#modalbtn").click(function(){
     $("body").append("#bg")
     $("body").append("#modal")
+    $("#modal").attr("data-pin-id")
 
     $("#bg").fadeIn();
     $("#modal").fadeIn();
@@ -74,3 +94,10 @@ $(function(){
   });
 });
 
+
+// $(function(){
+//   $("#box").hover(function(){
+//     $("#btns").fadeIn();
+//     // $("#text")fadeIn();
+//   });
+// });

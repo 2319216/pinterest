@@ -6,9 +6,12 @@
      animation: bgscroll 25s linear infinite;
     .pins-create_background-image{
       margin-top: 5%;
-      .panel-heading{
-        h1{
-          text-align: center;
+      .panel_default{
+        border-radius: 7px;
+        .panel-heading{
+          h1{
+            text-align: center;
+          }
         }
       }
     }
