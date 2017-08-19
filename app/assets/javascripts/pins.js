@@ -29,10 +29,10 @@
 
 // });
 
-$(function(){
+// $(function(){
 
-  $('#btns').hover(function () {
-    $(this).fadeOut("slow");
-  });
+//   $('#btns').hover(function () {
+//     $(this).fadeOut("slow");
+//   });
 
-});
+// });
