@@ -32,7 +32,6 @@
 // })
 
 
-
 $(document).on('turbolinks:load', function() {
   $('.grid').masonry({
       columnWidth: 0
@@ -48,17 +47,12 @@ $(document).on('turbolinks:render', function() {
 
 
 $(function(){
-
-  // $("#modal").each(function(){
-  //   $(this).attr("id","#{@pin.id}");
-  // });
-
-  // var pin_id = pin.attr("data-pin-id");
-
-  $("#modalbtn").click(function(){
+  $("#modalbtn").hover(function(){
     $("body").append("#bg")
     $("body").append("#modal")
-    $("#modal").attr("data-pin-id")
+
+    $("#bg").hide();
+    $("#modal").hide();
 
     $("#bg").fadeIn();
     $("#modal").fadeIn();
@@ -80,7 +74,7 @@ $(function(){
   $("#sherepin").click(function(){
     $("body").append('#tooltip');
 
-    $("#tooltip").css("top", $(this).offset().top - $("#sherepin").height() - 20 );
+    $("#tooltip").css("top", $(this).offset().top - $("#sherepin").height() - 7 );
     $("#tooltip").css("left", $(this).offset().left - ($("#tooltip").width() - $(this).width())/2.5);
 
     $("#tooltip").fadeIn();
@@ -94,10 +88,16 @@ $(function(){
   });
 });
 
-
-// $(function(){
-//   $("#box").hover(function(){
-//     $("#btns").fadeIn();
-//     // $("#text")fadeIn();
-//   });
+// $('.btn').on('click', function(){
+//     var id =  $(this).attr("id");
+//     alert(id);
 // });
+
+
+$(function(){
+  $(".box").hover(function(){
+    $("#btns").fadeIn();
+    // $("#text")fadeIn();
+  });
+});
+

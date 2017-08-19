@@ -18,7 +18,7 @@ class PinsController < ApplicationController
   def create
     @pin = current_user.pins.build(pin_params)
     if @pin.save
-      redirect_to @pin, notice: "Successfuly create new Pin"
+      redirect_to @pin, notice: "投稿が完了しました"
     else
       render 'new'
     end
