@@ -47,7 +47,7 @@ $(document).on('turbolinks:render', function() {
 
 
 $(function(){
-  $("#modalbtn").hover(function(){
+  $("#modalbtn").click(function(){
     $("body").append("#bg")
     $("body").append("#modal")
 
@@ -94,10 +94,10 @@ $(function(){
 // });
 
 
-$(function(){
-  $(".box").hover(function(){
-    $("#btns").fadeIn();
-    // $("#text")fadeIn();
-  });
-});
+// $(function(){
+//   $(".box").hover(function(){
+//     $("#btns").fadeIn();
+//     // $("#text")fadeIn();
+//   });
+// });
 
