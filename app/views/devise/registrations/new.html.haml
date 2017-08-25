@@ -1,10 +1,30 @@
-%h2 Sign up
-= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = f.error_notification
-  .form-inputs
-    = f.input :email, required: true, autofocus: true
-    = f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)
-    = f.input :password_confirmation, required: true
-  .form-actions
-    = f.button :submit, "Sign up"
-= render "devise/shared/links"
+#sign-up
+  .bg
+    .log-in_wrapper
+      .log-in_btn
+        %p ログイン
+      .log-in_content
+        .brand-icon
+          %i.fa.fa-pinterest.fa-3x
+        .message
+          %p 登録をしてピンをチェック！
+        .form
+          = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+            = f.error_notification
+            .form-inputs
+              = f.input :email, placeholder: "メール", required: true, autofocus: true
+              = f.input :password, placeholder: "パスワードを作成",required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)
+              / = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+            .form-actions
+              = f.button :submit, "続行"
+          / = render "devise/shared/links"
+          %p または
+        .fb-icon
+          %a.fl_fb2
+            %i.fa.fa-facebook
+            %span Facebookでログイン
+          %a.fl_google
+            %i.fa.fa-google
+            %span Googleで続行
+        .policy
+          %p 利用を継続することで Pinterest の利用規約とプライバシーポリシーに同意することになります。
